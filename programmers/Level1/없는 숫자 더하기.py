@@ -6,4 +6,4 @@ def solution(numbers):
         if i not in numbers:
             sum += i
     return sum
-print(solution([1,2,3,4,6,9]))
+print(solution([1,2,3,4,6,9])) 
