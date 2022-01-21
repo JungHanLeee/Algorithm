@@ -7,3 +7,4 @@ def solution(numbers):
             sum += i
     return sum
 print(solution([1,2,3,4,6,9])) 
+ 
