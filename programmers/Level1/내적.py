@@ -3,4 +3,4 @@ def solution(a, b):
 
     for i in range(len(a)):
         answer+=a[i]*b[i]
-    return answer
+    return answer 
