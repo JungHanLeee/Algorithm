@@ -1,3 +1,4 @@
+#나의 풀이
 def solution(answers):
     answers=list(answers)
     cnt=len(answers)
@@ -88,3 +89,26 @@ def solution(answers):
     print(arr2)
     print(arr3)
     return final
+# 다른사람 풀이
+#내 풀이에 비해 가독성도 좋고 짧게 코딩한게 너무 멋있다
+#좀 더 고민해보고 문제를 푸는 방식으로 해봐야겠다
+def solution(answers):
+    pattern1 = [1,2,3,4,5]
+    pattern2 = [2,1,2,3,2,4,2,5]
+    pattern3 = [3,3,1,1,2,2,4,4,5,5]
+    score = [0, 0, 0]
+    result = []
+
+    for idx, answer in enumerate(answers):
+        if answer == pattern1[idx%len(pattern1)]:
+            score[0] += 1
+        if answer == pattern2[idx%len(pattern2)]:
+            score[1] += 1
+        if answer == pattern3[idx%len(pattern3)]:
+            score[2] += 1
+
+    for idx, s in enumerate(score):
+        if s == max(score):
+            result.append(idx+1)
+
+    return result
